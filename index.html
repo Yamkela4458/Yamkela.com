@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Personal Portfolio Website</title>
+        <link rel="Stylesheet" href="style.css">
+
+            <style>
+      /* Floating Words */
+      .floating-word {
+        position: fixed;
+        font-size: 20px;
+        font-weight: bold;
+        color: burlywood;
+        animation: floatWord 5s linear infinite;
+        pointer-events: none;
+        z-index: 999;
+      }
+
+      @keyframes floatWord {
+        0% {
+          transform: translateY(100vh) scale(1);
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-10vh) scale(1.2);
+          opacity: 0;
+        }
+      }
+    </style>
+
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="project1.html">Projects</a></li>
+                    <li><a href="#contact-info">Contact me</a></li>
+                </ul>
+            </nav>
+        </br>
+        </br>
+                <div class="chat-container">
+                <div class="chat-header"><img src="images/yummy-emoji.gif" width="40"> Hey there, Let’s chat...</div>
+                <div class="chat-box" id="chat-box"></div>
+                 <form id="chat-form">
+                  <input type="text" id="user-input" placeholder="Type a question..." autocomplete="off" />
+                <button type="submit">Send</button>
+                 </form>
+                 </div>
+                <script src="bot.js"></script>
+
+
+            <div class="header-text">
+
+                   <h1><span id="typed-text"></span><span class="cursor">|</span>Hello There</h1>
+
+                   <h1>This is Yamkela Lusithi</h1>
+                   <p>Educational Technologist | EdTech Practitioner | Learning Experience Design</p>
+            </br>
+                    <h6>"Education is not the filling of a pail, but the lighting of a fire." – 
+                      William Butler Yeats</h6>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                <img src="images/IMG_7533.jpg" width="360"/>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Yamkela Lusithi is an Educational Technologist and EdTech Specialist dedicated to bridging the gap 
+                        between pedagogy, technology, and research. I have a strong foundation in language, 
+                        literacy, and educational research, I design innovative learning experiences that 
+                        empower learners, parents and educators.
+                        My passion lies in leveraging technology to create meaningful, accessible, and 
+                        learner-centered educational tools. I believe that technology should not just digitize traditional teaching 
+                        but transform learning by fostering critical thinking, collaboration, and lifelong curiosity.
+                        an Educational Technologist and EdTech Specialist dedicated to bridging the gap between pedagogy, technology, 
+                        and research. With a strong foundation in language, literacy, and educational research, I design innovative learning
+                        experiences that empower learners and educators alike.
+                        My passion lies in leveraging technology to create meaningful, accessible, and learner-centered educational tools. I believe that technology 
+                        should not just digitize traditional teaching but transform learning by fostering critical thinking, collaboration, and lifelong curiosity.
+                      </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('coding skills')">Coding Skills</p>
+                            <p class="tab-links" onclick="opentab('education')" >Educational Background</p>
+                            <p class="tab-links" onclick="opentab('additional Technical skills')" >Additional Technical Skills</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="coding skills">
+                            <ul>
+                                <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                                <li><span>Developer Tools</span><br>VS Code, Android Studion, Cursor, Git & GitHub</li>
+                                <li><span>Programming Languages</span><br>PYTHON, JavaScript, Flutter & Dart</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Aug 2025</span><br>Mobile App Development (Flutter & Dart) - Udemy </li>
+                                <li><span>Aug 2025</span><br>Python Programming - Udemy </li>
+                                <li><span>July 2025</span><br>Certificate in Full Stack Development - FNB App Academy </li>
+                                <li><span>June 2025</span><br>Software Engineering Simulation Certificate - Forage </li>
+                                <li><span>June 2025</span><br></li>Basics of Data Visualisation Using Python - UniAthena</li>
+                                <li>Cambridge International Qualifications, UK</li>
+                                <li><span>April 2025</span><br>Python web developer Masterclass Certificate - Udemy</li>
+                                <li><span>2025</span><br>Artificial Intelligence in the 4IR, B.Ed(Hons) - (Part-time)</li>
+                                    <li>University of Johannesburg</li>
+                                <li><span>2024</span><br>Python fundamentals - Codecademy</li>
+                                <li><span>May 2024</span><br>Bachelor of Education - Walter Sisulu University</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="additional Technical skills">
+                            <ul>
+                                <li>Website Maintenance</li>
+                                <li>Secure Web Design</li>
+                                <li>Technical Writing</li>
+                            </ul>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!------services------->
+<div id="services">
+    <div class="container">
+         <h1 class="sub-title">My Services</h1>
+         <div class="services-list">
+            <div>
+              <img src="images/360_F_531344829_bKiejxS8VkR7h18myjE1oACyFmXuXabM.jpg" width="90"><h2>Instructional
+                 Design and Learning Experience Development</h2>
+                <ul>
+                    <li>Designing learner-centered online courses based on educational theories like Bloom’s Taxonomy, 
+                      Cognitivism, and Constructivism</li>
+                    <li>Creating interactive learning materials (quizzes, simulations, branching scenarios) using 
+                      tools like Articulate Storyline, Captivate, or H5P</li>
+                    <li>Adapting traditional lessons into digital formats for LMS platforms like Moodle or Google Classroom</li>
+                    <li>Mapping learning objectives to measurable outcomes</li>
+                </ul>
+            </div>
+          </br>
+            <div>
+              <img src="images/360_F_531344829_bKiejxS8VkR7h18myjE1oACyFmXuXabM.jpg" width="90"><h2>Curriculum and Content Development</h2>
+                <ul>
+                    <li>Developing digital curricula aligned to school or university standards</li>
+                    <li>Writing and structuring educational content that’s research-informed and accessible</li>
+                    <li>Localizing and adapting content for different cultural or linguistic contexts</li>
+                    <li>Designing assessment tools (formative and summative)</li>
+                </ul>
+            </div>
+          </br>
+            <div>
+                <img src="images/Web-Development-icon-Graphics-40763454-1.jpg" width="70"><h2>Web Development For Learning</h2>
+                <P>I develop custom educational websites, easy-to-use websites that work seamslessly across devices. From Personal
+                    portfolio, EdTech site, or blog, I focus on crafting clean and functional designs that align
+                    with your educational vision. Using modern web tools and best practices, I ensure that each site is fast,
+                    user-friendly and accessible.</p>
+            </div> 
+          </br>
+            <div>
+                <img src="images/9364669.png" width="70"><h2>UI/UX Design</h2>
+                <p>I offer simple and user-friendly UI(User Interface) / UX(User Experience) design services
+                    focused on creating clean, responsive layouts that aim to enhance how users interact with
+                    your website and app. I design with the user in mind to ensure that each and every element 
+                    is easily navigatable and appealing to the eye. Whether you are starting a new project or 
+                    want to bring your ideas to life with consistency and clarity at the core. I am here for that! </p>
+            </div> 
+          </br>
+             <div>
+                <img src="images/360_F_531344829_bKiejxS8VkR7h18myjE1oACyFmXuXabM.jpg" width="90"><h2>Educational Research and Data Analysis</h2>
+                <ul>
+                    <li>Conducting needs assessments to identify gaps in current teaching practices</li>
+                    <li>Running qualitative and quantitative research to evaluate EdTech solutions</li>
+                    <li>Producing evidence-based reports to guide EdTech adoption</li>
+                    <li>Measuring learning outcomes and ROI for educational programs</li>
+                </ul>
+                <a href="learn.html"target="_blank">Take a fun Quiz!</a>
+            </div> 
+         </div>
+    </div>
+</div>
+<!--------portfolio----------->
+<div id="portfolio">
+
+    <div class="container">
+        <h1 class="sub-title">Skills</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/e44c896d-02a0-408b-a348-a0e0bcc7283c.png">
+                <div class="layer">
+                    <h2>Technical skills</h2>
+                </br>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript</li>
+                    </br>
+                        <li>Python (Basics)</li>
+                    </br>
+                        <li>Flutter & Dart (Mobile App Development)</li> 
+                </br>
+                    <li>Responsive Web Design</li>    
+                    </ul>
+                            <i class="fi fi-rs-arrow-up-right-from-square"></i>
+                </br>
+
+                    <h3>Educational Technology & Research</h3>
+                </br>
+                    <ul>
+                        <li>Blended & Online Learning Strategies</li>
+                    </br>
+                        <li>Learning Management Systems (Moodle, Google Classroom)</li> 
+                  </br>
+                  <li>Educational Research Methods (Qualitative & Quantitative)</li> 
+                </br>
+                <li>Data Collection & Analysis (SPSS, Excel, Google Sheets)</li>
+              </br>
+              <li>Academic Writing & Literature Reviews</li>                  
+                </ul>
+                     <h3>Instructional Design & Learning</h3>
+                </br>
+                     <ul>
+                        <li>Learning Experience Design (LXD)</li>
+                </br>
+                        <li>Instructional Design Models (ADDIE, SAM)</li>
+                </br>
+                        <li>E-learning Authoring Tools (Articulate Storyline, Adobe Captivate, H5P)</li>
+                     </ul>
+                     <h2>Professional Skills</h2>
+                </br>
+                    <h3>Soft Skills</h3>
+                </br>
+                    <ul>
+                        <li>Project Management (Agile, Scrum)</li>
+                </br>
+                          <li>Time Management</li>
+                </br>
+                        <li>Excellent Communication</li>
+                </br>
+                        <li>Problem-Solving & Critical Thinking</li>
+                </br>
+                        <li>Adaptability & Continuous Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Behind my website -->
+<section class="behind-build">
+  <h2>Behind the Scenes of my Build</h2>
+  <div class="build-timeline">
+    <div class="build-node">
+      <div class="dot glow"></div>
+      <p><strong>Learning isn’t the hardest part </strong>believing I'm ready was. </p>
+    </div>
+    <div class="build-node">
+      <div class="dot glow"></div>
+      <p><strong>I started with HTML and CSS, </strong> then fell in love with what code can do for education.</p>
+    </div>
+    <div class="build-node">
+      <div class="dot glow"></div>
+      <p><strong>I design for real people. </strong>I always ask: “Would a 10-year-old get this?”</p>
+    </div>
+    <div class="build-node">
+      <div class="dot glow"></div>
+      <p><strong>I don’t just build interfaces and programs,</strong> I build learning moments.</p>
+    </div>
+    <div class="build-node">
+      <div class="dot glow"></div>
+      <p><strong>Some projects take days.</strong>  Others took restarts.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.behind-build {
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at top left, #0f0f0f, #1a1a1a);
+  color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.behind-build h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-in-out;
+  color: #f1af08;
+  text-shadow: 0 0 10px #b8c40d, 0 0 20px #e8c40c;
+}
+
+.build-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.build-node {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeInUp 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffd900;
+  box-shadow: 0 0 8px #00ffd5, 0 0 15px #00ffd5;
+  animation: pulse 1.5s infinite;
+}
+
+.build-node p {
+  font-size: 1rem;
+  max-width: 400px;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.build-node:hover p {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
+}
+
+/* Animated line */
+.build-timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, #ff9d00, transparent);
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 2px);
+  z-index: 0;
+  animation: drawLine 6s ease-in-out forwards;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5; }
+  50% { box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drawLine {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+@media screen and (max-width: 768px) {
+  .build-node p {
+    font-size: 0.95rem;
+  }
+  .build-timeline::before {
+    left: 20px;
+  }
+  .build-node {
+    align-items: flex-start;
+  }
+}
+</style>
+
+<!-------contact----->
+    <div id="contact-info">
+        <div class="my-contact">
+            <h1>Get in touch with me here...</h1>
+        </br>
+            <h3>Email: lusithiyamkela@gmail.com</h3>
+    </br>
+            <h3>Contact Number: +27 66 543 0254</h3>
+        </br>
+            <a href="https://github.com/Yamkela4458">GitHub</a>
+
+            <a href="https://linkedin.com/in/yamkela-lusithi">linkedin</a>
+    </br>
+    </br>
+            </br>
+              <footer>
+    &copy; 2025 Yamkela Lusithi | Contact: lusithiyamkela@gmail.com | LinkedIn: www.linkedin.com/in/yamkela-lusithi
+  </footer>
+        </div>
+    </div>
+
+ <script>
+      const words = [
+        "Welcome",
+        "Research",
+        "Innovation",
+        "Student Empowerment",
+        "Bloom's Taxonomy",
+        "Jean Piaget",
+        "B.F Skinner",
+        "Vigotsky",
+        "Constuctivism",
+        "Cognitive Developement",
+        "Behaviorism",
+      ];
+
+      function createFloatingWord(text) {
+        const word = document.createElement("div");
+        word.className = "floating-word";
+        word.textContent = text;
+
+        word.style.left = Math.random() * 100 + "vw";
+        word.style.top = 100 + Math.random() * 200 + "px";
+        word.style.fontSize = Math.random() * 20 + 15 + "px";
+
+        document.body.appendChild(word);
+
+        setTimeout(() => {
+          word.remove();
+        }, 10000);
+      }
+
+      setInterval(() => {
+        const randomWord = words[Math.floor(Math.random() * words.length)];
+        createFloatingWord(randomWord);
+      }, 1500);
+    </script>
+
+         <script src="script.js"></script>
+        
+    </body>
+</html>

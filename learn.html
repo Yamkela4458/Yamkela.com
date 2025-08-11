@@ -1,0 +1,158 @@
+<section id="about-me-quiz" style="padding: 3rem; background-image: url('images/IMG_9438.JPG'); background-size: cover; background-color: #0d1117; color: #fff;">
+  <h2 style="text-align: center; font-size: 2rem; color: #f5c518;">👨🏽‍💻 How Well Do You Know Yamkela?</h2>
+  
+  <div class="quiz-box" style="max-width: 700px; margin: 2rem auto; padding: 2rem; background: #161b22; border-radius: 12px; box-shadow: 0 0 20px #f5c51844;">
+    <form id="quiz-form">
+
+      <!-- Question 1 -->
+      <div class="question-block">
+        <p>1. What is Yamkela’s primary tech stack?</p>
+        <label><input type="radio" name="q1" value="a" /> MERN Stack</label><br />
+        <label><input type="radio" name="q1" value="b" /> HTML, CSS & JavaScript</label><br />
+        <label><input type="radio" name="q1" value="c" /> Django & React</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-block">
+        <p>2. What is the name of his financial literacy project?</p>
+        <label><input type="radio" name="q2" value="a" /> JuniorCash</label><br />
+        <label><input type="radio" name="q2" value="b" /> Budget4Teens</label><br />
+        <label><input type="radio" name="q2" value="c" /> MoneySave Jr</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-block">
+        <p>3. What does Yamkela aim to merge in his career?</p>
+        <label><input type="radio" name="q3" value="a" /> Tech and Sports</label><br />
+        <label><input type="radio" name="q3" value="b" /> Education and Technology</label><br />
+        <label><input type="radio" name="q3" value="c" /> Finance and Real Estate</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-block">
+        <p>4. Which university is Yamkela studying at?</p>
+        <label><input type="radio" name="q4" value="a" /> University of Cape Town</label><br />
+        <label><input type="radio" name="q4" value="b" /> University of Johannesburg</label><br />
+        <label><input type="radio" name="q4" value="c" /> University of Pretoria</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-block">
+        <p>5. Which programming language is Yamkela currently learning for mobile app development?</p>
+        <label><input type="radio" name="q5" value="a" /> Swift</label><br />
+        <label><input type="radio" name="q5" value="b" /> Dart</label><br />
+        <label><input type="radio" name="q5" value="c" /> Kotlin</label>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question-block">
+        <p>6. Which tool has Yamkela used for full-stack development certification?</p>
+        <label><input type="radio" name="q6" value="a" /> Google Cloud Skills Boost</label><br />
+        <label><input type="radio" name="q6" value="b" /> FNB App Academy</label><br />
+        <label><input type="radio" name="q6" value="c" /> AWS Educate</label>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question-block">
+        <p>7. Which EdTech skills does Yamkela specialize in?</p>
+        <label><input type="radio" name="q7" value="a" /> Instructional Design and Learning Management Systems</label><br />
+        <label><input type="radio" name="q7" value="b" /> Game Development and Animation</label><br />
+        <label><input type="radio" name="q7" value="c" /> Network Administration</label>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question-block">
+        <p>8. Which research method is Yamkela experienced in?</p>
+        <label><input type="radio" name="q8" value="a" /> Quantitative and Qualitative Research</label><br />
+        <label><input type="radio" name="q8" value="b" /> Astrophysics Data Analysis</label><br />
+        <label><input type="radio" name="q8" value="c" /> Chemical Lab Experimentation</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Answers</button>
+      <div id="quiz-result" style="margin-top: 1.5rem; font-weight: bold;"></div>
+    </form>
+  </div>
+</section>
+
+<style>
+  .question-block {
+    margin-bottom: 1.5rem;
+  }
+
+  .question-block p {
+    font-size: 1.1rem;
+    color: #c9d1d9;
+    margin-bottom: 0.5rem;
+  }
+
+  label {
+    display: block;
+    padding: 0.2rem 0;
+    color: #8b949e;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    accent-color: #f5c518;
+  }
+
+  .submit-btn {
+    margin-top: 1rem;
+    background: #f5c518;
+    color: #0d1117;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: #e0b814;
+  }
+</style>
+
+<!-- JS Logic -->
+<script>
+  document.getElementById("quiz-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const answers = {
+      q1: "b",
+      q2: "c",
+      q3: "b",
+      q4: "b",
+      q5: "b",
+      q6: "b",
+      q7: "a",
+      q8: "a"
+    };
+
+    let score = 0;
+    let total = Object.keys(answers).length;
+
+    Object.keys(answers).forEach((key) => {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === answers[key]) {
+        score++;
+      }
+    });
+
+    const result = document.getElementById("quiz-result");
+    if (score === total) {
+      result.innerHTML = "✅ Perfect! You really know Yamkela!";
+      result.style.color = "#00ff88";
+    } else if (score >= total - 2) {
+      result.innerHTML = "👍 Not bad! You’re getting to know him.";
+      result.style.color = "#f5c518";
+    } else {
+      result.innerHTML = "😅 Keep exploring the portfolio — Yamkela has a lot to share!";
+      result.style.color = "#ff4d4d";
+    }
+  });
+</script>
+
+  <footer>
+    &copy; 2025 Yamkela Lusithi | Contact: lusithiyamkela@gmail.com | LinkedIn: www.linkedin.com/in/yamkela-lusithi
+  </footer>
